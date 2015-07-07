@@ -5,9 +5,9 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"HudPlayerHealth"
-		"xpos"			"100"		[$WIN32]
+		"xpos"			"c-250"		[$WIN32]
 		"xpos_minmode"	"-5"		[$WIN32]
-		"ypos"			"200"	[$WIN32]
+		"ypos"			"c50"	[$WIN32]
 		"ypos_minmode"	"r88"	[$WIN32]
 		"xpos"			"32"	[$X360]
 		"ypos"			"r144"	[$X360]
@@ -21,31 +21,35 @@
 		"HealthDeathWarningColor"	"HUDDeathWarning"
 	}	
 	"PlayerStatusHealthImage"
+	
+	// this is the white cross
+	
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"PlayerStatusHealthImage"
 		"xpos"			"75"
-		"xpos_minmode"	"60"
 		"ypos"			"35"
 		"zpos"			"4"
 		"wide"			"51"
 		"tall"			"51"
-		"visible"		"1"
+		"visible"		"0"
 		"enabled"		"1"
 		"scaleImage"	"1"	
 	}		
 	"PlayerStatusHealthImageBG"
+	
+	// the grey area, i have this disabled /off of the screen
+	
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"PlayerStatusHealthImageBG"
-		"xpos"			"73"
-		"xpos_minmode"	"58"
-		"ypos"			"33"
+		"xpos"			"9999999"
+		"ypos"			"9999999"
 		"zpos"			"3"
 		"wide"			"55"
 		"tall"			"55"
-		"visible"		"1"
-		"enabled"		"1"
+		"visible"		"0"
+		"enabled"		"0"
 		"image"			"../hud/health_bg"
 		"scaleImage"	"1"	
 	}	
@@ -72,23 +76,45 @@
 		"scaleImage"	"1"	
 	}
 	"PlayerStatusHealthValue"
+	
+	// the numbers of health
+	
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"PlayerStatusHealthValue"
-		"xpos"			"76"
-		"xpos_minmode"	"61"
-		"ypos"			"52"	[$WIN32]
+		"xpos"			"26"
+		"ypos"			"-15"	[$WIN32]
 		"ypos"			"55"	[$X360]
 		"zpos"			"5"
-		"wide"			"50"
-		"tall"			"18"
+		"wide"			"150"
+		"tall"			"150"
 		"visible"		"1"
 		"enabled"		"1"
 		"labelText"		"%Health%"
 		"textAlignment"	"center"	
-		"font"			"HudClassHealth"
-		"fgcolor"		"TanDark"
-	}								
+		"font"			"Plump 50"
+		"fgcolor"		"255 255 255 255"
+	}						
+	"PlayerStatusHealthValueBG"
+	
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"PlayerStatusHealthValueBG"
+		"xpos"			"28"
+		"ypos"			"-13"	[$WIN32]
+		"ypos"			"55"	[$X360]
+		"zpos"			"4"
+		"wide"			"150"
+		"tall"			"150"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"%Health%"
+		"textAlignment"	"center"	
+		"font"			"Plump 50"
+		"fgcolor"		"0 0 0 255"
+	}						
+
+	
 	"PlayerStatusBleedImage"
 	{
 		"ControlName"	"ImagePanel"
